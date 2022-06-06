@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "type": "module",
     "scripts": {
         "start": "nodemon main.js"
     },
@@ -19,7 +18,10 @@
     },
     "homepage": "https://github.com/Himel47/Task2_CrudAPP#readme",
     "dependencies": {
+        "bcrypt": "^5.0.1",
+        "dotenv": "^16.0.1",
         "express": "^4.18.1",
+        "mysql": "^2.18.1",
         "uuid": "^8.3.2"
     },
     "devDependencies": {

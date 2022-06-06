@@ -1,15 +1,12 @@
-import express from "express";
-import bodyParser from 'body-parser';
-
+require("dotenv").config();
+const express = require("express");
 const app = express();
-const PORT = 4362;
+const userRouter = require("./api/users/user.router");
 
-app.use(bodyParser.json());
+app.use(express.json());
+app.use("/api/users", userRouter);
 
-app.get('/', (req, res) => {
-    console.log('[TEST]!');
 
-    res.send('Hello From MainPage.');
-});
-
-app.listen(PORT, () => console.log(`Server Started at Port: http://localhost:${PORT}`));
+app.listen(process.env.APP_PORT, () =>
+    console.log(`Server Started at Port: http://localhost:${process.env.APP_PORT}`)
+);
