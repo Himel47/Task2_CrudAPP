@@ -7,6 +7,6 @@ app.use(express.json());
 app.use("/api/users", userRouter);
 
 
-app.listen(4362, () =>
-    console.log(`Server Started at Port: http://localhost:${4362}`)
+app.listen(process.env.APP_PORT, () =>
+    console.log(`Server Started at Port: http://localhost:${process.env.APP_PORT}`)
 );
